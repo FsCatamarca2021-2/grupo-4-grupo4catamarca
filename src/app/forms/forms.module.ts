@@ -5,15 +5,4 @@ import { EntradaComponent } from './entrada/entrada.component';
 
 
 
-@NgModule({
-  declarations: [
-    RegistroComponent,
-    EntradaComponent
-  ],
-  imports: [
-    CommonModule
-  ],
-  exports:[RegistroComponent,
-    EntradaComponent]
-})
-export class FormsModule { }
+

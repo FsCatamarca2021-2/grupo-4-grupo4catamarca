@@ -42,14 +42,20 @@
         color: white;
         text-decoration: underline;
     }
-    .form-registre .botons {
+    .button {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  
+    }    
+    .button {
         width: 100%;
-        background-color: #555753;
-        border: none;
-        padding: 12px;
-        color: white;
-        margin: 16px 0;
-        font-size: 16px;
-        text-align: center;
-        
+            background-color: rgb(90, 92, 91);       
+            border: none;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 16px 0;
+            cursor: pointer;
     }
+    
