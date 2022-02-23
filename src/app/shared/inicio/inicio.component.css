@@ -1,0 +1,17 @@
+.txt_inicio{
+    width: 60%;
+    background-color: rgba(33, 197, 187, 1);
+    border-radius: 23px;
+    color: white;
+    font-size: 20px;
+    font-family: Georgia;
+    text-align: center;
+    margin-inline: auto;
+
+}
+
+.img{
+    width: 272px;
+    height: 222px;
+    border-radius: 23px;
+}
