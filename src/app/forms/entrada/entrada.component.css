@@ -4,7 +4,7 @@
     box-sizing:border-box;
     }
  .container {
-    width: 400px;
+    width: 290px;
     background-color: #72a1bd;
     padding: 16px;
     margin: auto;
@@ -21,7 +21,7 @@
     text-align: center;
 } 
 .container a{
-    margin: 90px;
+   text-align: center;
     color: white;
     text-decoration: none;
     
@@ -42,3 +42,4 @@
         margin: 16px 0;
         cursor: pointer;
 }
+

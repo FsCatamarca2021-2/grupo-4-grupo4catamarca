@@ -10,7 +10,8 @@ import { EntradaComponent } from './entrada/entrada.component';
         CommonModule
     ],
     exports:[
-        RegistroComponent
+        RegistroComponent,
+        EntradaComponent,
 
     ]
   })
