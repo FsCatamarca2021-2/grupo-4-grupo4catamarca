@@ -10,6 +10,9 @@ import { IncioSesionComponent } from './incio-sesion/incio-sesion.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    IncioSesionComponent
   ]
 })
 export class PagModule { }
