@@ -1,0 +1,17 @@
+.footer{
+    width: 100%;
+    background-color: #9654aa;
+    border-radius: 3px
+}
+
+.btn{
+    width: 35px;
+    height: 32px;
+    margin-left: 12px;
+    border: 2px solid #000000;
+    border-radius: 11px;
+    
+}
+ a{
+     color: #f4afff;
+ }

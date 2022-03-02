@@ -9,6 +9,11 @@ import { EntradaComponent } from './entrada/entrada.component';
     imports:[
         CommonModule
     ],
+    exports:[
+        RegistroComponent,
+        EntradaComponent,
+
+    ]
   })
   export class FormsModule { }
 
