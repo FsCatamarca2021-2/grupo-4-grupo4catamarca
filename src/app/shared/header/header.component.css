@@ -16,8 +16,7 @@
 a{  font-style: normal;
     font-weight: bold;
     font-size: 18px;
-    line-height: 26px;
-    
+    line-height: 26px;    
     color: #FFFFFF;}
 button {
     width: 190px;
@@ -25,7 +24,9 @@ button {
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
-    line-height: 26px;}
+    line-height: 26px;
+}
+   
 HEAD{
     color: #4ed5df;}
 HEAD{
