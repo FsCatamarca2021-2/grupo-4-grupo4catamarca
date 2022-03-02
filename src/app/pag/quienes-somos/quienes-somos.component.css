@@ -1,0 +1,31 @@
+.container{
+    background-color: #9654aa;
+    margin-top: 40px;
+    border-radius: 12px;
+    width: 630px;
+    box-shadow: 0px 0px 37px #f700c2;
+}
+
+.container h3 {
+    color: ghostwhite;
+    text-align: center;
+    font-family: Georgia;
+    text-decoration: underline wavy ghostwhite;
+}
+
+.container dt{
+    font-size: 16px;
+    color: ghostwhite;
+    font-family: Georgia;
+}
+
+.container dl{
+    font-size: 13px;
+    color: ghostwhite;
+    font-family: Georgia;
+}
+
+p{
+    color: ghostwhite;
+    font-family: Georgia;
+}
