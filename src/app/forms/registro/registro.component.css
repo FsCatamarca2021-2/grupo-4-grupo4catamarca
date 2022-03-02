@@ -10,7 +10,7 @@
         margin: auto;
         margin-top: 20px;
         border-radius: 60px;
-        font-family: 'Calibri';
+        font-family: Georgia;;
         color: white;
         box-shadow: 7px 13px 37px #c604f7;
     }
@@ -25,7 +25,7 @@
         border-radius: 4px;
         margin-bottom: 16px;
         border: 1px solid  rgb(90, 92, 91);
-        font-family: 'Calibri';
+        font-family: Georgia;;
         font-size: 18px;
     }
     .form-registre p {
