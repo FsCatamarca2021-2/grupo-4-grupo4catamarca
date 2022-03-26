@@ -10,8 +10,10 @@ import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
+    AppComponent,  
+  ],
+   exports:[
     AppComponent,
-   
   ],
   imports:[
     FormsModule,

@@ -14,19 +14,22 @@
          </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="margin-left: 439px; margin-top: -121px;">
            <div class="navbar-nav" >             
-            <a  class="nav-link" type="button" routerLink="quienes_somos" routerLinkActive="active" >¿QUIÉNES SOMOS? </a>            
-            <a class="nav-link" type="button" routerLink="contacto" routerLinkActive="active" >CONTACTO </a>        
-                     
+            <!--<a  class="nav-link" type="button"   routerlink="/quienes-somos.component">¿QUIÉNES SOMOS? </a>   -->         
+           <a href="quienes_somos" class="routerLink" type="button">¿QUIÉNES SOMOS?</a> 
+           <br>
+           <!--<a class="nav-link" type="button"    routerlink="/contacto.component">CONTACTO </a> -->       
+            <a href="contacto" class="routerLink" type="button">CONTACTO</a>   
            </div>
           </div>
           <div class="col-md-3 text-end" style="margin-top: -10%;" >
             <div>
-              <button type="button" routerlink="/ingreso"  class="btn btn-outline-primary me-2"  style="margin-top: -52px; ;background-color: black; left:calc(50% - 212px/2 + 622px);"><font style="vertical-align: inherit;">INGRESÁ</font></button>
+              <!--<button type="button"  routerlink="/entrada.component"  class="btn btn-outline-primary me-2"  style="margin-top: -52px; ;background-color: black; left:calc(50% - 212px/2 + 622px);"><font style="vertical-align: inherit;">INGRESÁ</font></button>-->
+              <a href="entrada" class="btn btn-info" role="button">INGRESÁ</a>
             </div>
 
            <div>              
-           <button type="button" routerLink="/registro" class="btn btn-primary" style="margin-top: -5px; margin-right: 8px;  left: 1272px;" ><font style="vertical-align: inherit;">REGISTRO</font></button>
-          
+           <!--<button type="button"  routerLink="/registro" class="btn btn-primary" style="margin-top: -5px; margin-right: 8px;  left: 1272px;" ><font style="vertical-align: inherit;">REGISTRO</font></button>-->
+           <a href="registro" class="btn btn-info" role="button">REGISTRO</a>
           </div>
           </div>
         </div>

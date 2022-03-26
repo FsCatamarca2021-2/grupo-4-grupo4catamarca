@@ -4,10 +4,12 @@ import { RegistroComponent } from './registro/registro.component';
 import { EntradaComponent } from './entrada/entrada.component';
 
 @NgModule({
-    declarations: [ EntradaComponent,RegistroComponent
+    declarations: [ 
+        EntradaComponent,
+        RegistroComponent,
     ],
     imports:[
-        CommonModule
+        CommonModule,
     ],
     exports:[
         RegistroComponent,
