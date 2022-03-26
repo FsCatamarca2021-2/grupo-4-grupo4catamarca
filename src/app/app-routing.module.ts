@@ -7,6 +7,8 @@ import { QuienesSomosComponent } from './pag/quienes-somos/quienes-somos.compone
 import { InicioComponent } from './shared/inicio/inicio.component';
 
 
+
+
 const routes: Routes = [
   {path:"", component: InicioComponent},
   {path:'entrada', component: EntradaComponent},
@@ -14,7 +16,6 @@ const routes: Routes = [
   {path:'quienes_somos', component: QuienesSomosComponent},
   {path:'contacto', component: ContactoComponent},
  
-
 
 ];
 
