@@ -7,7 +7,7 @@
     border-radius: 6px;
     box-sizing: border-box; 
     font-family: Georgia;
-}
+    }
 
 .botones{
     font-size: 16px;
@@ -15,19 +15,21 @@
 
 a{  font-style: normal;
     font-weight: bold;
+    font-family: Georgia;
     font-size: 18px;
     line-height: 26px;    
-    color: #FFFFFF;}
+    color: #ffffff;}
 button {
     width: 190px;
     height: 40px;
     font-style: normal;
+    font-family: Georgia;
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
 }
    
-HEAD{
+/*HEAD{
     color: #4ed5df;}
 HEAD{
     background:whitesmoke;
@@ -36,7 +38,7 @@ HEAD{
     border: 4px solid #17847D;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }    
+    }   */ 
 
 HEAD{color: #9654aa;
     background:whitesmoke;
@@ -46,3 +48,32 @@ HEAD{color: #9654aa;
     box-sizing: border-box;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);}
     
+#cont{
+    margin-left: 23px;
+}
+
+#btn{
+    width: 130px;
+    background-color: #000000;
+    border-color: #d657fd;
+    border-radius: 17px;
+}
+#btn:hover {     
+    background: #000000;; 
+    color: rgb(6, 255, 6)
+}
+#btn1{
+    background-color: #d657fd;
+    margin-top: 8px;
+    border-color: #d657fd;
+    border-radius: 17px;
+}
+#btn1:hover {     
+    background: #5d0d70;; 
+    color: white
+}
+#contbtn{
+    height: 95px;
+    width: 133px;
+    margin-top: -140px;
+}
