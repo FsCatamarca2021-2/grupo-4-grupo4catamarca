@@ -1,14 +1,48 @@
-<div class="container-fluid" style="background-color: #3e0062;">
+ <form class="m-2" [formGroup]="form"  (ngSubmit)="save($event)">
+  <form class="container-fluid">
+    <div class="container-fluid" class="form-group" style="background-color: #3e0062;">
     <div class="row">
-   <div class="col-md-12">
-    <section class=" form-registre">
-        <p>Formulario de Registro</p>
-    <input class="controls" type="texto" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-    <input class="controls" type="texto" name="Apellido" id="Apellido" placeholder="Ingrese su Apellido">
-    <input class="controls" type="number" name="Dni" id="Dni" placeholder="Ingrese su DNI">
-    <input class="controls" type="texto" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion">
-    <input class="controls" type="text" name="provincia" id="provincia" value="Catamarca" readonly>
-    <select id="dpto" class="controls">
+    <form class="col-md-12">
+   <section class=" form-registre">
+  <p>Formulario de Registro</p>
+    <div class="form-group" >
+    <label  for="name">Nombre:</label>
+    <input  type="texto" formControlName="nombre" name="nombre" class="form-control" placeholder="Ingrese su Nombre"
+    id="nombre"  > 
+    <span *ngIf="this.form.get('nombre')?.errors?.['required']">
+      (El nombre no puede quedar vacío)
+    </span>
+    </div>
+    <div class="form-group">
+    <label for="apellido" >Apellido:</label>
+    <input type="texto" formControlName="apellido" name="apellido" class="form-control" placeholder="Ingrese su Apellido"
+    id="apellido">
+    <span *ngIf="this.form.get('apellido')?.errors?.['required']">
+      (El apellido no puede quedar vacío)
+    </span>
+    </div>
+    <div class="form-group">
+    <label for="DNI">DNI :</label>
+    <input type="number" formControlName="dni" class="form-control" placeholder="Ingrese su DNI" id="DNI" >
+    <span *ngIf="this.form.get('dni')?.errors?.['required']">
+      (El dni no puede quedar vacío máx 8)
+    </span></div>
+    <div class="form-group">
+    <label for="direccion">Direccion :</label>
+    <input type="texto" formControlName="direccion" class="form-control" placeholder="Ingrese su Direccion"
+    id="direccion">
+    <span *ngIf="this.form.get('direccion')?.errors?.['required']">(La dirreccion no puede quedar vacía)
+    </span>
+    </div>
+    <div class="form-group"> 
+    <label for="provincia">Provincia:</label>
+    <input type="texto" formControlName="provincia" class="form-control" placeholder="Ingrese su Provincia"
+     id="provincia" >
+     <span *ngIf="this.form.get('provincia')?.errors?.['required']">
+      (La provincia no puede quedar vacía)
+    </span>
+    </div>
+    <select id="dpto" class="form-control">
         <option value="1">Ambato</option>
         <option value="2">Ancasti</option>
         <option value="3">Andalgala</option>
@@ -26,15 +60,21 @@
         <option value="15">Tinogasta</option>
         <option value="16">Valle Viejo</option>
     </select>
-    <input class="controls" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo">
-    <input class="controls" type="password" name="nombres" id="nombres" placeholder="Ingrese su contraseña">
+    <div class="form-group"> 
+    <label for="email">Email:</label>
+    <input type="texto" formControlName="mail" class="form-control" placeholder="Ingrese su mail example@.com"
+    id="email">
+    <span *ngIf="form.errors && form.dirty">
+      <p *ngIf="form.hasError('required')">El mail es requerido.</p>
+      </span>
+     <div class="form-group"> 
+    <label for="contraseña">Contraseña:</label>
+    <input type="text" formControlName="contraseña" class="form-control" placeholder="Ingrese su contraseña"  
+    id="password"  >
+    <span *ngIf="this.form.get('contraseña')?.errors?.['required']">
+      (La contraseña debe ser +10 caracter -15)
+    </span>
+        </div>
     <input style="opacity:1; " type="checkbox" name="terminos"><p style="display: inline;">He leído y acepto los <a href="#"> Terminos y Condiciones</a>  </p>
-    <button class="button button1">Registro</button>
+    <button type="submit" id="btnSubmit" [disabled]="form.invalid" class="button button1">Registro</button>
     <p> <a href="#"> ¿Ya tienes una cuenta? </a> </p>
-    
-    </section>
-</div>
-   </div>
-</div>
-
-    
