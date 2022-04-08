@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RegistroComponent } from './registro/registro.component';
 import { EntradaComponent } from './entrada/entrada.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [ 
@@ -11,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ],
     imports:[ReactiveFormsModule,
         CommonModule,
+        FormsModule
     ],
     exports:[
         RegistroComponent,
@@ -18,5 +20,5 @@ import { ReactiveFormsModule } from '@angular/forms';
 
     ]
   })
-  export class FormsModule { }
+  export class FormulariosModule { }
 

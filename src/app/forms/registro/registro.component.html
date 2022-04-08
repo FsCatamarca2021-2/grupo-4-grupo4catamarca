@@ -1,46 +1,52 @@
- <form class="m-2" [formGroup]="form"  (ngSubmit)="save($event)">
-  <form class="container-fluid">
-    <div class="container-fluid" class="form-group" style="background-color: #3e0062;">
+ <form  [formGroup]="form"  (ngSubmit)="save($event)">
+  <div class="container-fluid">
+    <div  style="background-color: #3e0062;">
     <div class="row">
-    <form class="col-md-12">
+    <div class="col-md-12">
    <section class=" form-registre">
   <p>Formulario de Registro</p>
-    <div class="form-group" >
-    <label  for="name">Nombre:</label>
-    <input  type="texto" formControlName="nombre" name="nombre" class="form-control" placeholder="Ingrese su Nombre"
-    id="nombre"  > 
-    <span *ngIf="this.form.get('nombre')?.errors?.['required']">
-      (El nombre no puede quedar vacío)
-    </span>
+    <div [formGroup]="form" >
+    <label  for="nombre">Nombre:</label>
+    <input  type="text"  formControlName="nombre" name="nombre" class="form-control" placeholder="Ingrese su Nombre"
+    id="nombre"  >
+    <div *ngIf="this.form.get('nombre')?.errors && form.get('nombre')?.touched">
+      <p *ngIf="form.get('nombre')?.hasError('required')" class="text-danger">
+        Es un campo requerido
+      </p>
     </div>
-    <div class="form-group">
+    </div>
+    <div [formGroup]="form">
     <label for="apellido" >Apellido:</label>
-    <input type="texto" formControlName="apellido" name="apellido" class="form-control" placeholder="Ingrese su Apellido"
+    <input type="text"   formControlName="apellido" name="apellido" class="form-control" placeholder="Ingrese su Apellido"
     id="apellido">
-    <span *ngIf="this.form.get('apellido')?.errors?.['required']">
-      (El apellido no puede quedar vacío)
-    </span>
+    <div *ngIf="this.form.get('apellido')?.errors && form.get('apellido')?.touched" >
+      <p *ngIf="form.get('apellido')?.hasError('required')" class="text-danger">
+      El apellido no puede quedar vacío   </p>
+          </div>
     </div>
-    <div class="form-group">
+    <div [formGroup]="form">
     <label for="DNI">DNI :</label>
-    <input type="number" formControlName="dni" class="form-control" placeholder="Ingrese su DNI" id="DNI" >
-    <span *ngIf="this.form.get('dni')?.errors?.['required']">
-      (El dni no puede quedar vacío máx 8)
-    </span></div>
-    <div class="form-group">
-    <label for="direccion">Direccion :</label>
-    <input type="texto" formControlName="direccion" class="form-control" placeholder="Ingrese su Direccion"
-    id="direccion">
-    <span *ngIf="this.form.get('direccion')?.errors?.['required']">(La dirreccion no puede quedar vacía)
-    </span>
+    <input type="number"  formControlName="dni" class="form-control" placeholder="Ingrese su DNI" id="DNI" >
+    <div *ngIf="this.form.get('dni')?.errors && form.get('dni')?.touched" >
+      <p *ngIf="form.get('dni')?.hasError('required')" class="text-danger">El dni no puede quedar vacío máx 8 </p>
+          </div>  
     </div>
-    <div class="form-group"> 
+    <div [formGroup]="form" class="form-group">
+    <label for="direccion">Direccion :</label>
+    <input type="text"  formControlName="direccion" class="form-control" placeholder="Ingrese su Direccion"
+    id="direccion">
+    <div *ngIf="this.form.get('direccion')?.errors && form.get('direccion')?.touched" >
+      <p *ngIf="form.get('direccion')?.hasError('required')" class="text-danger">La dirreccion no puede quedar vacía</p>
+    </div>
+  </div>
+    <div [formGroup]="form" class="form-group"> 
     <label for="provincia">Provincia:</label>
-    <input type="texto" formControlName="provincia" class="form-control" placeholder="Ingrese su Provincia"
+    <input type="text"  formControlName="provincia" class="form-control" placeholder="Ingrese su Provincia"
      id="provincia" >
-     <span *ngIf="this.form.get('provincia')?.errors?.['required']">
-      (La provincia no puede quedar vacía)
-    </span>
+     <div *ngIf="this.form.get('provincia')?.errors && form.get('provincia')?.touched" >
+      <p *ngIf="form.get('provincia')?.hasError('required')" class="text-danger">
+    La provincia no puede quedar vacía</p>
+     </div>    
     </div>
     <select id="dpto" class="form-control">
         <option value="1">Ambato</option>
@@ -60,21 +66,31 @@
         <option value="15">Tinogasta</option>
         <option value="16">Valle Viejo</option>
     </select>
-    <div class="form-group"> 
+    <div class="form-group" [formGroup]="form"> 
     <label for="email">Email:</label>
-    <input type="texto" formControlName="mail" class="form-control" placeholder="Ingrese su mail example@.com"
+    <input type="texto"  formControlName="mail" class="form-control" placeholder="Ingrese su mail example@.com"
     id="email">
-    <span *ngIf="form.errors && form.dirty">
-      <p *ngIf="form.hasError('required')">El mail es requerido.</p>
-      </span>
-     <div class="form-group"> 
+    <div *ngIf="this.form.get('mail')?.errors && form.get('mail')?.touched" >
+      <p *ngIf="form.get('mail')?.hasError('required')" class="text-danger">
+      El mail es requerido</p>
+    </div>
+  </div>
+  <div class="form-group" [formGroup]="form"> 
     <label for="contraseña">Contraseña:</label>
-    <input type="text" formControlName="contraseña" class="form-control" placeholder="Ingrese su contraseña"  
+    <input type="text"  formControlName="contraseña" class="form-control" placeholder="Ingrese su contraseña"  
     id="password"  >
-    <span *ngIf="this.form.get('contraseña')?.errors?.['required']">
-      (La contraseña debe ser +10 caracter -15)
-    </span>
-        </div>
-    <input style="opacity:1; " type="checkbox" name="terminos"><p style="display: inline;">He leído y acepto los <a href="#"> Terminos y Condiciones</a>  </p>
-    <button type="submit" id="btnSubmit" [disabled]="form.invalid" class="button button1">Registro</button>
-    <p> <a href="#"> ¿Ya tienes una cuenta? </a> </p>
+    <div *ngIf="this.form.get('contraseña')?.errors && form.get('contraseña')?.touched" >
+      <p *ngIf="form.get('contraseña')?.hasError('required')" class="text-danger">
+      La contraseña debe ser +10 caracter -15 </p>
+    </div>
+  </div>
+   <input style="opacity:1; " type="checkbox" name="terminos"><p style="display: inline;">He leído y acepto los <a href="#"> Terminos y Condiciones</a>  </p>
+   <button type="submit" id="btnSubmit" [disabled]="form.invalid" class="button button1">Registro</button>
+   <p> <a href="#"> ¿Ya tienes una cuenta? </a> </p>
+    </section>
+    </div>
+    </div>
+    </div>
+  </div>
+ </form>
+ 

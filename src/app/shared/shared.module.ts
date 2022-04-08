@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormsModule } from '../forms/forms.module';
+import { FormulariosModule } from '../forms/forms.module';
 import { PagModule } from '../pag/pag.module';
 
 
@@ -15,7 +15,7 @@ import { PagModule } from '../pag/pag.module';
      FooterComponent,
     ],
   imports: [
-    FormsModule,
+    FormulariosModule,
     PagModule, 
     CommonModule,
   ],

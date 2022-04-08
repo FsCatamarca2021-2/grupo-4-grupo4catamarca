@@ -4,7 +4,7 @@ import { RouterModule} from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from './forms/forms.module';
+import { FormulariosModule } from './forms/forms.module';
 import { PagModule } from './pag/pag.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -17,7 +17,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports:[
     ReactiveFormsModule,
-    FormsModule,
+    FormulariosModule,
     SharedModule,
     BrowserModule,
     AppRoutingModule,

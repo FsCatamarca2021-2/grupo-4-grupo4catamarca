@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-entrada',
@@ -10,6 +11,7 @@ export class EntradaComponent implements OnInit {
   password!:string;
   
   constructor() { }
+
   
   login(){
   console.log(this.email);
