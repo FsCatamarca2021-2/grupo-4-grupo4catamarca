@@ -81,3 +81,14 @@ img{
     margin:20%;
  display:block;
 }
+
+#opc{
+  background: rgb(241, 228, 246); 
+  color: rgb(125, 28, 137); 
+  font-weight: bold; 
+  position: relative; 
+  padding: 8px; 
+  border: 6px solid; 
+  border-radius: 4px; 
+  width: 100%;
+}

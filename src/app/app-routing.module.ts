@@ -18,6 +18,7 @@ const routes: Routes = [
   {path:'quienes_somos', component: QuienesSomosComponent},
   {path:'contacto', component: ContactoComponent},
   {path:'principal', component:InicioComponent},
+  {path:'iniciodesesion', component:IncioSesionComponent},
  
 
 ];
