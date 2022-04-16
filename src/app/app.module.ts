@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { FormulariosModule } from './forms/forms.module';
 import { PagModule } from './pag/pag.module';
 import { SharedModule } from './shared/shared.module';
+import { PagComponent } from './transferencia/pag/pag.component';
 
 @NgModule({
   declarations: [
-    AppComponent,  
+    AppComponent,
+    PagComponent,  
   ],
    exports:[
     AppComponent,
