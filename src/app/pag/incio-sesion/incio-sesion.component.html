@@ -1,4 +1,4 @@
-    <body style="background-color: blueviolet;">        
+    <body style="background-color: #e8cef7;">        
     
     <div class="container-fluid">
         <div class="row">
@@ -6,7 +6,7 @@
             <div class="rectangle2">
                <div class="row">
                     <div class="col-md-4">
-                        <div class="dropdown" style="left: 50px; top:12px">
+                        <div class="dropdown" id="cuenta">
                             <button class="dropbtn">Cuenta</button>
                             <div class="dropdown-content">
                             <a href="#">Movimientos</a>
@@ -22,7 +22,7 @@
                          <img src="../../../assets/img/Logo.png" alt="">
                     </div>
                     <div class="col-md-4">
-                        <div class="dropdown" style="left: 193px; top:12px">
+                        <div class="dropdown" id="perfil" >
                             <button class="dropbtn">Mi perfil</button>
                             <div class="dropdown-content">
                             <a href="#">Cambio de Clave</a>
@@ -41,14 +41,18 @@
     <div class="Cuadro" id="opc">
         <div class="row">
             <div class="column">
-              <a href="#"><img class="centrar" src="Imagenes/dinero1..png" alt="Billete" style="width:25%" title="Transferir"></a>
-                </div>
+              <a href="#"><img class="centrar" src="../../../assets/img/ingresar.png" alt="Billete"  title="Ingresar dinero"></a>
+              <p id="ing">Ingresar Dinero</p>    
+            </div>
             <div class="column">
-              <a href="#"><img class="centrar" src="Imagenes/Pagar..png" alt="Pagar" style="width:25%" title="Pagar"></a>
-                 </div>
+                <input type="text" name="Saldo" id="sald">
+              <a href="#"><img class="centrar" src="../../../assets/img/Pagarinicio.png" alt="Pagar"  title="Pagar Servicio"></a>
+                 <p id="pag" >Pagar Servicio</p>
+            </div>
             <div class="column">
-              <a href="#"><img class="centrar" src="Imagenes/cambio.png" alt="Moneda-extranjera" style="width:25%" title="Cambio de Moneda"></a>       
-                </div>
+              <a href="#"><img class="centrar" src="../../../assets/img/transferir.png" alt="Transferencia"  title="Realizar Transferencia" ></a>       
+              <p id="trans">Realizar Transferencia</p>    
+            </div>
         </div>
         </div>
         <br>

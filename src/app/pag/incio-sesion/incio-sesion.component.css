@@ -8,12 +8,19 @@
    box-sizing: border-box; 
    font-family:"Georia";
 }
-
+#perfil{
+  left: 220px;
+    top: 12px;
+}
+#cuenta{
+  left: 65px;
+  top: 12px;
+}
 img{
     width: 191px;
     height: 97px;
     border-radius: 20px;
-    margin-left: 110px;
+    margin-left: 127px;
     margin-top: 7px;
 }
 .dropbtn {
@@ -52,7 +59,9 @@ img{
     display: block;
   }
   
-  .dropdown-content a:hover {background-color: #f562d5}
+  .dropdown-content a:hover {background-color: #f562d5;
+  border-radius: 12px;
+  }
   
   .dropdown:hover .dropdown-content {
     display: block;
@@ -80,6 +89,9 @@ img{
   .centrar{
     margin:20%;
  display:block;
+ width: 25%;
+  margin-inline: auto;
+
 }
 
 #opc{
@@ -91,4 +103,27 @@ img{
   border: 6px solid; 
   border-radius: 4px; 
   width: 100%;
+}
+#sald{
+  margin-left: 110px;
+  width: 50%;
+  height: 23%;
+  border-radius: 12px;
+  background: #e5a7e4;
+  border: solid 4px #7d1c89;
+}
+#ing{
+  margin-top: -79px;
+  margin-bottom: 2rem;
+  margin-left: 143px;
+}
+#pag{
+  margin-top: -65px;
+  margin-bottom: 2rem;
+  margin-left: 160px;
+}
+#trans{
+  margin-top: -65px;
+  margin-bottom: 2rem;
+  margin-left: 130px;
 }
