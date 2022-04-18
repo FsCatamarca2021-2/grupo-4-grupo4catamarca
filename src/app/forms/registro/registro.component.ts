@@ -2,6 +2,9 @@ import { ThisReceiver } from '@angular/compiler';
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators,FormControl,FormGroup, EmailValidator,FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UsersService } from 'src/app/servicios/users.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-registro',
@@ -12,7 +15,9 @@ export class RegistroComponent implements OnInit {
  form!: FormGroup;
  nombre!: string;
     
- constructor(private formBuilder: FormBuilder) 
+ constructor(private formBuilder: FormBuilder,
+              public usersService: UsersService,
+              private Router: Router,) 
  {this.buildForm(); 
 }
 
@@ -39,7 +44,9 @@ export class RegistroComponent implements OnInit {
     const value = this.form.value;
     console.log(value);
    }
-   } 
+   
+  }
+ 
 }
 
 
