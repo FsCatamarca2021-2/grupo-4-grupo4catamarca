@@ -7,6 +7,7 @@ import { QuienesSomosComponent } from './pag/quienes-somos/quienes-somos.compone
 import { HeaderComponent } from './shared/header/header.component';
 import { InicioComponent } from './shared/inicio/inicio.component';
 import { IncioSesionComponent } from './pag/incio-sesion/incio-sesion.component';
+import { TranferenciaComponent } from './pag/transferencia/tranferencia.component';
 
 
 
@@ -18,13 +19,14 @@ const routes: Routes = [
   {path:'quienes_somos', component: QuienesSomosComponent},
   {path:'contacto', component: ContactoComponent},
   {path:'principal', component:InicioComponent},
+  {path:'iniciodesesion', component:IncioSesionComponent},
+  {path:'transferencia', component:TranferenciaComponent},
  
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule,
-  ]
+  exports: [RouterModule ]
 })
 export class AppRoutingModule { }

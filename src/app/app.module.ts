@@ -11,9 +11,11 @@ import { UsersService } from './servicios/users.service';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
-    AppComponent,  
+    AppComponent,
+ 
   ],
    exports:[
     AppComponent,
@@ -26,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     RouterModule,
     PagModule,
+    
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]
