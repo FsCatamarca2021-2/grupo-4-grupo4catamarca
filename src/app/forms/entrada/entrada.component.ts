@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { UsersService } from 'src/app/servicios/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-entrada',
@@ -9,14 +11,23 @@ import { FormsModule } from '@angular/forms';
 export class EntradaComponent implements OnInit {
   email!: string;
   password!:string;
+  usersService: any;
   
-  constructor() { }
+  constructor(public userService: UsersService, public router: Router) { }
 
   
   login(){
-  console.log(this.email);
-  console.log(this.password);}
+    const user = { email: this.email, password: this.password };
+    this.usersService.login(user).subscribe(
+      (    data: { token: any; }) => {
+    this.usersService.setToken(data.token);
+    this.router.navigateByUrl('/');
+  },
+      (  error: any) =>{
+    console.log(error);
+  });
+}
   ngOnInit(): void {
-  }
+  };
 
 }

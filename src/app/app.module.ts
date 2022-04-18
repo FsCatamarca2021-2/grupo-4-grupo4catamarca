@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { FormulariosModule } from './forms/forms.module';
 import { PagModule } from './pag/pag.module';
 import { SharedModule } from './shared/shared.module';
+import { UsersService } from './servicios/users.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,7 @@ import { SharedModule } from './shared/shared.module';
    exports:[
     AppComponent,
   ],
-  imports:[
+  imports:[ HttpClientModule,
     ReactiveFormsModule,
     FormulariosModule,
     SharedModule,
@@ -24,7 +27,7 @@ import { SharedModule } from './shared/shared.module';
     RouterModule,
     PagModule,
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
