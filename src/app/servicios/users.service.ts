@@ -1,20 +1,29 @@
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { RegistroComponent } from '../forms/registro/registro.component';
-import { EntradaComponent } from '../forms/entrada/entrada.component';
+import { Cliente } from '../forms/registro/Cliente';
+
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
   
-  
+
   
   constructor( private httpClient: HttpClient ) { }
 
- registrocliente (clientes:any): Observable<any>{
-  return this.httpClient.post('/clientes/guardarcliente',clientes)
+ crearcliente (oCliente:Cliente ){
+  return this.httpClient.post('/clientes/guardarcliente',oCliente)
+            .pipe(
+              map ((resp:any)=>{
+                oCliente.IdCliente=resp.Nombre;
+                return oCliente;
+              })
+            );
  
 
  }

@@ -1,9 +1,7 @@
 { 
     "/clientes/": {
-        "target": "http://localhost:7175",
+        "target": "https://localhost:7175/",
         "secure": false,
-        "pathRewrite": {
-            "^/api": ""
-        }
+        "logLevel": "debug"
     }
 }
