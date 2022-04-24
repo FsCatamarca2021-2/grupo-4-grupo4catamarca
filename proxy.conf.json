@@ -1,0 +1,7 @@
+{ 
+    "/clientes/": {
+        "target": "https://localhost:7175/",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
