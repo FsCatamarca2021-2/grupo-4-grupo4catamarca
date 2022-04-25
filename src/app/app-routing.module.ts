@@ -8,6 +8,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { InicioComponent } from './shared/inicio/inicio.component';
 import { IncioSesionComponent } from './pag/incio-sesion/incio-sesion.component';
 import { TranferenciaComponent } from './pag/transferencia/tranferencia.component';
+import { DivisasComponent } from './pag/divisas/divisas.component';
 
 
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'principal', component:InicioComponent},
   {path:'iniciodesesion', component:IncioSesionComponent},
   {path:'transferencia', component:TranferenciaComponent},
+  {path:'divisas',component:DivisasComponent}
  
 
 ];
