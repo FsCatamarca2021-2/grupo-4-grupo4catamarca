@@ -34,7 +34,7 @@ export class RegistroComponent implements OnInit {
       Apellido: ['',[Validators.required]], 
       dni : ['',  [ Validators.required ,Validators.maxLength(8)]] , 
       Mail : ['', [Validators.required,Validators.email ]] , 
-      Contraseña :['' ,[Validators.required,Validators.minLength(10),Validators.maxLength(15),] ], 
+      Contrasena :['' ,[Validators.required,Validators.minLength(10),Validators.maxLength(15),] ], 
       direccion:['',[Validators.required]],
       
       
@@ -52,7 +52,7 @@ export class RegistroComponent implements OnInit {
       .subscribe(resp=> {
         console.log(resp);
         console.log('redireccionar'); 
-        this.Router.navigateByUrl('/iniciodesesion');
+        this.Router.navigateByUrl('entrada');
       })
 
   }}}

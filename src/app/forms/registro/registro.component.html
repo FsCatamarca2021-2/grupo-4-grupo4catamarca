@@ -74,9 +74,9 @@
     </div>
   </div>
   <div class="form-group" [formGroup]="oCliente"> 
-    <label for="Contraseña">Contraseña:</label>
-    <input type="text"  formControlName="Contraseña" class="form-control" placeholder="Ingrese su contraseña"  
-    id="password"  >
+    <label for="Contrasena">Contraseña:</label>
+    <input type="text"  formControlName="Contrasena" class="form-control" placeholder="Ingrese su contraseña"  
+    id="Contrasena"  >
     <div *ngIf="this.oCliente.get('Contraseña')?.errors && oCliente.get('Contraseña')?.touched" >
       <p *ngIf="oCliente.get('Contraseña')?.hasError('required')" class="text-danger">
       La contraseña debe ser +10 caracter -15 </p>
@@ -84,7 +84,7 @@
   </div>
    <input style="opacity:1; " type="checkbox" name="terminos"><p style="display: inline;">He leído y acepto los <a href="#"> Terminos y Condiciones</a>  </p>
    <button type="submit" id="btnSubmit" [disabled]="oCliente.invalid" class="button button1">Registro</button>
-   <p> <a href="#"> ¿Ya tienes una cuenta? </a> </p>
+   <p> <a href='entrada'> ¿Ya tienes una cuenta? </a> </p>
     </section>
     </div>
     </div>

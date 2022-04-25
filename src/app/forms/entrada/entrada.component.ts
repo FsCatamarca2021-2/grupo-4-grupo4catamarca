@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, Validators,FormControl } from '@angular/forms';
 import { UsersService } from 'src/app/servicios/users.service';
 import { Router } from '@angular/router';
+import { IngresoCliente } from './ingresobjeto';
 
 @Component({
   selector: 'app-entrada',
@@ -9,25 +10,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./entrada.component.css']
 })
 export class EntradaComponent implements OnInit {
-  email!: string;
-  password!:string;
-  usersService: any;
+ Mail!:string;
+ Contrasena!:string; 
+  Ingreso!:FormGroup;
   
-  constructor(public userService: UsersService, public router: Router) { }
-
   
-  login(){
-    const user = { email: this.email, password: this.password };
-    this.usersService.login(user).subscribe(
-      (    data: { token: any; }) => {
-    this.usersService.setToken(data.token);
-    this.router.navigateByUrl('/');
-  },
-      (  error: any) =>{
-    console.log(error);
-  });
-}
-  ngOnInit(): void {
-  };
+  constructor(private formBuilder :FormBuilder,
+              public userService: UsersService,
+              public router: Router) {this.buildForm(); }
 
-}
+   
+
+  ngOnInit(): void {}
+    
+  private buildForm(){
+    this.Ingreso = this.formBuilder.group({
+      Mail: ['', [Validators.required]],
+      Contrasena: ['', [Validators.required]]
+  });}
+
+ ingreso(Mail: string,Contrasena: string){
+  Mail= this.Ingreso.value.Mail 
+  Contrasena= this.Ingreso.value.Contrasena
+  if (this.Ingreso.valid ){ 
+  console.log("ingresando");
+  this.userService.ingresocliente(Mail,Contrasena)
+  
+
+ }}}
