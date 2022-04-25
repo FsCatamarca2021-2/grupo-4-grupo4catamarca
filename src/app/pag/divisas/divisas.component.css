@@ -1,0 +1,96 @@
+.rectangle2 { 
+    width: 100%;
+   height: 125px;
+   left: 0px;
+   top: -8px;
+  background: #9654aa;
+   border-radius: 6px;
+   box-sizing: border-box; 
+   font-family:"Georia";
+}
+#perfil{
+  left: 220px;
+    top: 12px;
+}
+#cuenta{
+  left: 65px;
+  top: 12px;
+}
+img{
+    width: 191px;
+    height: 97px;
+    border-radius: 20px;
+    margin-left: 127px;
+    margin-top: 7px;
+}
+.dropbtn {
+    width: 100%;
+    height: 90%;
+    background-color: hsl(286, 36%, 66%);
+    color: white;
+    margin: 16px;
+    padding: 16px;
+    font-size: 16px;
+    border:none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 12px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #a005a5;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px white;
+    z-index: 1;
+    border-radius: 12px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f562d5;
+  border-radius: 12px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color:#9654aa;
+  }
+
+.formularioHome {
+    background: rgba(255, 255, 255, 0.8);
+    color: #9654aa;
+    height: 80%;
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 6px solid;
+    border-radius: 15px;
+  }
+  .form-group header{
+  color:#9654aa;
+  margin-bottom: 15px;
+  padding: 1px;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  }
+  .form-group p {
+    color: #9654aa;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }

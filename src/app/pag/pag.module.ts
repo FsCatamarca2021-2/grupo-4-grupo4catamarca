@@ -5,6 +5,7 @@ import { IncioSesionComponent } from './incio-sesion/incio-sesion.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { TranferenciaComponent } from './transferencia/tranferencia.component';
+import { DivisasComponent } from './divisas/divisas.component';
 
 
 
@@ -14,6 +15,7 @@ import { TranferenciaComponent } from './transferencia/tranferencia.component';
     QuienesSomosComponent,
     ContactoComponent,
     TranferenciaComponent,
+    DivisasComponent,
   
   ],
   imports: [
@@ -24,6 +26,7 @@ import { TranferenciaComponent } from './transferencia/tranferencia.component';
     QuienesSomosComponent,
     ContactoComponent,
     TranferenciaComponent,
+    DivisasComponent,
     
   ]
 })
