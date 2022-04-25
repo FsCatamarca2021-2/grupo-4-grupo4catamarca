@@ -19,7 +19,7 @@
                         </div>                        
                     </div>
                     <div class="col-md-4">
-                         <img src="../../../assets/img/Logo.png" alt="">
+                         <img id="principal" src="../../../assets/img/Logo.png" alt="">
                     </div>
                     <div class="col-md-4">
                         <div class="dropdown" id="perfil" >
@@ -41,20 +41,33 @@
     <div class="Cuadro" id="opc">
         <div class="row">
             <div class="col-md-6">
-             <label for="monto">Monto</label> 
-             <input type="number" name="monto" id="monto">   
-             <label for="cvu">CVU/CBU</label> 
-             <input type="number" name="cvu" id="cvu"> 
-             <input type="checkbox" name="seguro"><p>Estoy seguro de lo que estoy haciendo</p> 
+                <div class="items">
+                <div id="monto"><label for="monto">Monto : <span> <input type="number" name="monto" id="monto"></span></label>   
+                </div>
+                <br>
+                <div>
+                  <label for="cvu">CVU/CBU : <span> <input type="number" name="cvu" id="cvu"></span></label> 
+                  
+                </div>
+                <br>
+                <div>
+                   <input type="checkbox" name="seguro"> <span> <p style="display: inline;">Estoy seguro de lo que estoy haciendo</p> </span>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <input type="submit" name="Transferir" value="Transferir" class="btn btn-success" id="btntrans">
+                </div>
             </div>
-            <div class="row">
+        </div>
+          
             <div class="col-md-6">
-              <a href="transferencia" class="routerLink"><img class="centrar" src="../../../assets/img/transferir.png" alt="Transferencia"  title="Realizar Transferencia" ></a>       
-              <p id="trans">Realizar Transferencia</p>    
+              <img class="centrar" src="../../../assets/img/tranferimagen.png" alt="Transferencia"  id="imgtrans" >       
+                 
             </div>
         </div>
         </div>
-        </div>
+        
         <br>
         <br>
         <br>

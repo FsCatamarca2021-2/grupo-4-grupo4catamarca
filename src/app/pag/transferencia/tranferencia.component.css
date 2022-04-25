@@ -16,7 +16,7 @@
   left: 65px;
   top: 12px;
 }
-img{
+#principal{
     width: 191px;
     height: 97px;
     border-radius: 20px;
@@ -104,26 +104,18 @@ img{
   border-radius: 4px; 
   width: 100%;
 }
-#sald{
-  margin-left: 110px;
-  width: 50%;
-  height: 23%;
-  border-radius: 12px;
-  background: #e5a7e4;
-  border: solid 4px #7d1c89;
-}
-#ing{
-  margin-top: -79px;
-  margin-bottom: 2rem;
-  margin-left: 143px;
-}
-#pag{
-  margin-top: -65px;
-  margin-bottom: 2rem;
-  margin-left: 160px;
-}
-#trans{
-  margin-top: -65px;
-  margin-bottom: 2rem;
-  margin-left: 130px;
-}
+
+ #imgtrans{
+   width: 95%;
+   margin-top: 22px;
+   border-radius: 12px;
+ }
+ #monto{
+  margin-top: 46px;
+ }
+ .items{
+   margin-left: 30px;
+ }
+ #btntrans{
+   width: 80%;
+ }
