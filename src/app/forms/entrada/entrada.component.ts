@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, Validators,FormControl } from '@angular/forms';
 import { UsersService } from 'src/app/servicios/users.service';
 import { Router } from '@angular/router';
-import { IngresoCliente } from './ingresobjeto';
 
 @Component({
   selector: 'app-entrada',
@@ -29,12 +28,20 @@ export class EntradaComponent implements OnInit {
       Contrasena: ['', [Validators.required]]
   });}
 
- ingreso(Mail: string,Contrasena: string){
+ ingreso(Mail:string,Contrasena:string){
   Mail= this.Ingreso.value.Mail 
   Contrasena= this.Ingreso.value.Contrasena
   if (this.Ingreso.valid ){ 
-  console.log("ingresando");
-  this.userService.ingresocliente(Mail,Contrasena)
-  
-
- }}}
+   console.log("ingresando");
+   this.userService.ingresocliente(Mail,Contrasena)
+   .subscribe(data => {
+    if (data ==false){
+       console.error('Error ingrese su Mail y Contraseña ')}
+    if (data== true){
+    this.router.navigateByUrl('/iniciodesesion')
+  }
+   
+})}if (this.Ingreso.invalid)
+  {console.error('Error inesperado. Debe ingresar datos correctos');
+  this.router.navigateByUrl('/')}
+ }}

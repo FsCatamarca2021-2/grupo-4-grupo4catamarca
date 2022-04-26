@@ -4,7 +4,8 @@ import { BehaviorSubject, map, Observable, tap } from 'rxjs';
 import { Router } from '@angular/router';
 import { RegistroComponent } from '../forms/registro/registro.component';
 import { Cliente } from '../forms/registro/Cliente';
-import { IngresoCliente } from '../forms/entrada/ingresobjeto';
+import { EntradaComponent } from '../forms/entrada/entrada.component';
+
 
 
 
@@ -15,7 +16,8 @@ export class UsersService {
  
 
   
-  constructor( private httpClient: HttpClient )
+  constructor( private httpClient: HttpClient,
+               public router: Router )
   {}
 
  crearcliente (oCliente:Cliente ){
@@ -29,7 +31,15 @@ export class UsersService {
  
 
  }
- ingresocliente(Mail:string,Contrasena: string){
-  return this.httpClient.post('/clientes/ingresocliente', {Mail, Contrasena})
- }
-}
+ ingresocliente(Mail:string,Contrasena: string) 
+ {  return this.httpClient.get(`/clientes/ingresocliente?Mail=${Mail}&Contrasena=${Contrasena}`)
+  //.subscribe(data => {
+    //if (data ==false){
+      //this.router.navigateByUrl('/')
+    //}
+    //if (data== true){
+    //this.router.navigateByUrl('/iniciodesesion')
+  //}
+   
+//});
+}}
